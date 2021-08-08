@@ -14,4 +14,6 @@ document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundPosition = "center";
 
 const bgDimmed = document.querySelector("#bgDimmed");
-bgDimmed.style.cssText += `{width:${window.innerWidth}px; height:${window.innerHeight}px}`;
+bgDimmed.style.width = `${window.innerWidth}px`;
+bgDimmed.style.height = `${window.innerHeight}px`;
+bgDimmed.style.padding = "30%";
