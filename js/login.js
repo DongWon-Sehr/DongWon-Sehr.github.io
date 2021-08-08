@@ -36,6 +36,8 @@ function doLogin(userId) {
 	g_userId = userId;
 	loginInputId.value = "";
 	loginInputPw.value = "";
+
+	todoList.querySelectorAll("*").forEach(child => child.remove());
 	loadTodo();
 
 	loginForm.classList.toggle(HIDDEN_CLASS_NAME);
