@@ -34,7 +34,6 @@ function paintTodo(item) {
 	button.addEventListener("click", deleteTodo);
 	li.appendChild(button);
 
-	li.id = Date.now();
 	todoList.appendChild(li);
 
 }
@@ -42,7 +41,7 @@ function paintTodo(item) {
 function handleTodoSubmit(e) {
 	e.preventDefault();
 	const newItem = {
-		id: new Date(),
+		id: Date.now(),
 		val: todoInput.value
 	};
 	todoInput.value = ""; // empty input field
