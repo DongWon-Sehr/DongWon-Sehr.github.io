@@ -30,6 +30,7 @@ function deleteTodo(e) {
 	}
 
 	li.remove();
+	updateTodoCount();
 	console.log("delete success!")
 }
 
