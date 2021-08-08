@@ -18,6 +18,9 @@ function setTodo(todoContents) {
 	}
 
 	localStorage.setItem(TODO_KEYS, JSON.stringify(savedTodo));
+
+	console.log("\nsetTodo success!")
+
 }
 
 function deleteTodo(e) {
@@ -33,7 +36,7 @@ function deleteTodo(e) {
 
 	li.remove();
 	updateTodoCount();
-	console.log("delete success!")
+	console.log("\ndeleteTodo success!")
 }
 
 function paintTodo(item) {
