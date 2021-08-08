@@ -13,10 +13,10 @@ function paintTodo(item) {
 
 }
 
-function handleTodo(e) {
+function handleTodoSubmit(e) {
 	e.preventDefault();
 	const item = todoInput.value;
 	paintTodo(item);
 }
 
-todoForm.addEventListener("submit", handleTodo);
+todoForm.addEventListener("submit", handleTodoSubmit);
