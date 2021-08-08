@@ -7,8 +7,15 @@ const todoCount = document.querySelector("#todoCount");
 let todoContents = [];
 
 function setTodo(todoContents) {
-	const todos = { [g_userId]: todoContents }
-	localStorage.setItem("todos", JSON.stringify(todos));
+	let savedTodo = JSON.parse(localStorage.getItem("todos"));
+	if (savedTodo) {
+		savedTodo[g_userId] = todoContents;
+	}
+	else {
+		savedTodo = { [g_userId]: todoContents }
+	}
+
+	localStorage.setItem("todos", JSON.stringify(savedTodo));
 }
 
 function deleteTodo(e) {
