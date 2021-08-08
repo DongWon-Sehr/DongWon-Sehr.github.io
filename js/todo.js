@@ -17,7 +17,7 @@ function setTodo(todoContents) {
 		savedTodo = { [g_userId]: todoContents }
 	}
 
-	localStorage.setItem("todos", JSON.stringify(savedTodo));
+	localStorage.setItem(TODO_KEYS, JSON.stringify(savedTodo));
 }
 
 function deleteTodo(e) {
