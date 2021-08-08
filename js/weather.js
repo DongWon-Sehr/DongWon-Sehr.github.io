@@ -19,7 +19,7 @@ function onGeoSuccess(position) {
 }
 
 function onGeoError() {
-	alert("Can't fine where are you now!<br>No weather information for you :(");
+	alert("Can't fine where are you now!\nNo weather information for you :(");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
