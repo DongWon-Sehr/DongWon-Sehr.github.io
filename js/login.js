@@ -77,5 +77,5 @@ function handleLogout(e) {
 	doLogout();
 }
 
-loginBtn.addEventListener("submit", handleLogin);
-logoutBtn.addEventListener("submit", handleLogout);
+loginForm.addEventListener("submit", handleLogin);
+logoutForm.addEventListener("submit", handleLogout);
