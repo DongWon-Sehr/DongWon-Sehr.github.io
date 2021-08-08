@@ -41,9 +41,14 @@ function handleTodoSubmit(e) {
 	setTodo(todoContents);
 }
 
-todoForm.addEventListener("submit", handleTodoSubmit);
-
-const savedTodo = JSON.parse(localStorage.getItem("todos"));
-if (savedTodo.items) {
-	savedTodo.items.g_userId.forEach(paintTodo);
+function loadTodo() {
+	const savedTodo = JSON.parse(localStorage.getItem("todos"));
+	if (savedTodo) {
+		if (savedTodo.keys().includes(g_userId)) {
+			savedTodo.g_userId.forEach(paintTodo);
+		}
+	}
 }
+
+todoForm.addEventListener("submit", handleTodoSubmit);
+loadTodo();
