@@ -2,6 +2,7 @@
 const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector("#todoList");
+const todoCount = document.querySelector("#todoCount");
 
 let todoContents = [];
 
@@ -49,6 +50,12 @@ function handleTodoSubmit(e) {
 
 	paintTodo(newItem);
 	setTodo(todoContents);
+	updateTodoCount();
+
+}
+
+function updateTodoCount() {
+	userInfoSpan.innerText = `Todo Count: ${todoContents.length}`
 }
 
 function loadTodo() {
@@ -57,11 +64,11 @@ function loadTodo() {
 		if (Object.keys(savedTodo).includes(g_userId)) {
 			todoContents = savedTodo[g_userId];
 			todoContents.forEach(paintTodo);
-			return userInfoSpan.innerHTML += `<br>Todo Count: ${todoContents.length}`;
 		}
 	}
 
-	userInfoSpan.innerHTML += `<br>Todo Count: 0`;
+	todoContents ??= [];
+	updateTodoCount();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
