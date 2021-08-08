@@ -12,7 +12,7 @@ const logoutBtn = logoutForm.querySelector("#logoutBtn");
 const todoDiv = document.querySelector("#todoDiv");
 
 const USER_INFO_KEY = "userInfo";
-const HIDDEN_CLASS_NAME = HIDDEN_CLASS_NAME
+const HIDDEN_CLASS_NAME = "hidden";
 
 function setLoginInfo(userId, userPw) {
 	let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
