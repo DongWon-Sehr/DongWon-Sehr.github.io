@@ -62,7 +62,7 @@ function paintTodo(item) {
 function handleTodoSubmit(e) {
 	e.preventDefault();
 	const newItem = {
-		id: Date.now(),
+		id: String(Date.now()),
 		val: todoInput.value
 	};
 	todoInput.value = ""; // empty input field
