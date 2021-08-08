@@ -26,6 +26,7 @@ function paintTodo(item) {
 	button.addEventListener("click", deleteTodo);
 	li.appendChild(button);
 
+	li.id = newDate();
 	todoList.appendChild(li);
 
 }
@@ -41,3 +42,8 @@ function handleTodoSubmit(e) {
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
+
+const savedTodo = JSON.parse(localStorage.getItem("todos"));
+if (savedTodo) {
+	savedTodo.array.forEach(paintTodo);
+}
