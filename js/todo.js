@@ -4,10 +4,12 @@ const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector("#todoList");
 const todoCount = document.querySelector("#todoCount");
 
+const TODO_KEYS = "todos"
+
 let todoContents = [];
 
 function setTodo(todoContents) {
-	let savedTodo = JSON.parse(localStorage.getItem("todos"));
+	let savedTodo = JSON.parse(localStorage.getItem(TODO_KEYS));
 	if (savedTodo) {
 		savedTodo[g_userId] = todoContents;
 	}
@@ -70,7 +72,7 @@ function updateTodoCount() {
 }
 
 function loadTodo() {
-	const savedTodo = JSON.parse(localStorage.getItem("todos"));
+	const savedTodo = JSON.parse(localStorage.getItem(TODO_KEYS));
 	if (savedTodo) {
 		if (Object.keys(savedTodo).includes(g_userId)) {
 			todoContents = savedTodo[g_userId];
