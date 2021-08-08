@@ -3,7 +3,7 @@ const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector("#todoList");
 
-const todoContents = [];
+let todoContents = [];
 
 function setTodo(todoContents) {
 	const todos = { [g_userId]: todoContents }
@@ -45,8 +45,9 @@ function loadTodo() {
 	const savedTodo = JSON.parse(localStorage.getItem("todos"));
 	if (savedTodo) {
 		if (Object.keys(savedTodo).includes(g_userId)) {
-			savedTodo[g_userId].forEach(paintTodo);
-			return userInfoSpan.innerHTML += `<br>Todo Count: ${savedTodo[g_userId].length}`;
+			todoContents = savedTodo[g_userId];
+			todoContents.forEach(paintTodo);
+			return userInfoSpan.innerHTML += `<br>Todo Count: ${todoContents.length}`;
 		}
 	}
 
