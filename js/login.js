@@ -20,7 +20,7 @@ function setLoginInfo(userId, userPw) {
 	let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 
 	if (userInfo) {
-		userInfo.userId = userPw;
+		userInfo[userId] = userPw;
 	}
 	else {
 		userInfo = { [userId]: userPw };
