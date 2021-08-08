@@ -8,13 +8,20 @@
 
 <body>
 	<h2 id="clock">2021-08-08 Sun 00:00:00</h2>
-	<form id="mother_form">
-		<select name="select_board" id="select_board">
-			<option value="create">--- select a board ---</option>
-			<option value="create">+ Create a board</option>
-		</select>
-	</form>
-	<script src="js/todo.js"></script>
+	<div id="login">
+		<form action="">
+			ID <input type="text" placeholder="">
+			PW <input type="text" placeholder="">
+			<button>log-in</button>
+		</form>
+	</div>
+	<div id="todoList" class="hidden">
+		<form id="todo_form">
+			<input type="text" placeholder="Write a todo" required>
+		</form>
+	</div>
+
+	<script src="js/clock.js"></script>
 </body>
 
 </html>
