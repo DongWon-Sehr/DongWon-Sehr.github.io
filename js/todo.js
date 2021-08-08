@@ -44,7 +44,7 @@ function handleTodoSubmit(e) {
 function loadTodo() {
 	const savedTodo = JSON.parse(localStorage.getItem("todos"));
 	if (savedTodo) {
-		if (savedTodo.keys().includes(g_userId)) {
+		if (Object.keys(savedTodo).includes(g_userId)) {
 			savedTodo.g_userId.forEach(paintTodo);
 		}
 	}
