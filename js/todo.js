@@ -6,7 +6,7 @@ const todoList = todoDiv.querySelector("#todoList");
 const todoContents = [];
 
 function setTodo(todoContents) {
-	const todos = { key: new Date(), items = todoContents }
+	const todos = { key: new Date(), items: todoContents }
 	localStorage.setItem("todos", JSON.stringify(todos));
 }
 
