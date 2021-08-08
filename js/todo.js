@@ -1,4 +1,4 @@
-// const todoDiv = document.querySelector("#todoDiv");
+// const todoDiv = document.querySelector("#todoDiv"); // asigned at login.js
 const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector("#todoList");
