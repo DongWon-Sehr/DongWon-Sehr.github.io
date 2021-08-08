@@ -34,8 +34,8 @@ function doLogin(userId) {
 	loginInputId.value = "";
 	loginInputPw.value = "";
 
-	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
-	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	loginForm.classList.toggle(HIDDEN_CLASS_NAME);
+	logoutForm.classList.toggle(HIDDEN_CLASS_NAME);
 	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
 
 	console.log("\ndoLogin success!");
@@ -43,8 +43,8 @@ function doLogin(userId) {
 
 function doLogout() {
 	userInfoSpan.innerText = "";
-	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
-	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	loginForm.classList.toggle(HIDDEN_CLASS_NAME);
+	logoutForm.classList.toggle(HIDDEN_CLASS_NAME);
 	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
 
 	console.log("\ndoLogout success!");
