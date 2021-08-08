@@ -12,6 +12,7 @@ const logoutBtn = logoutForm.querySelector("#logoutBtn");
 const todoDiv = document.querySelector("#todoDiv");
 
 const USER_INFO_KEY = "userInfo";
+const HIDDEN_CLASS_NAME = HIDDEN_CLASS_NAME
 
 function setLoginInfo(userId, userPw) {
 	let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
@@ -31,16 +32,16 @@ function doLogin(userId) {
 	loginInputId.value = "";
 	loginInputPw.value = "";
 
-	loginBtn.classList.toggle("hidden");
-	logoutBtn.classList.toggle("hidden");
-	todoDiv.classList.toggle("hidden");
+	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
 }
 
 function doLogout() {
 	userInfoSpan.innerText = "";
-	loginBtn.classList.toggle("hidden");
-	logoutBtn.classList.toggle("hidden");
-	todoDiv.classList.toggle("hidden");
+	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
+	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
 }
 
 function handleLogin(e) {
