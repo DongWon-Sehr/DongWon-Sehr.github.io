@@ -15,7 +15,7 @@ function deleteTodo(e) {
 	li.remove();
 
 	for (let i = 0; i < todoContents.length; i++) {
-		if (todoContents[i].keys()[0] === li.id) {
+		if (todoContents[i].id === li.id) {
 			todoContents.splice(i, 1);
 			return setTodo(todoContents);
 		}
