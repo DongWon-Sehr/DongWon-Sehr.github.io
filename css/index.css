@@ -3,11 +3,15 @@
 }
 
 #bgDimmed {
+	position: relative;
 	z-index: 0;
 	background-color:rgba(255, 255, 255, 0.5);
 	padding: 20%;
 }
 
-#welcome, #loginDiv, #todoDiv {
+#welcome, 
+#loginDiv, 
+#todoDiv {
+	position: relative;
 	z-index: 1;
 }
