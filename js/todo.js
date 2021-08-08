@@ -6,7 +6,7 @@ const todoList = document.querySelector("#todoList");
 const todoContents = [];
 
 function setTodo(todoContents) {
-	const todos = { key: new Date(), items: todoContents }
+	const todos = { [g_userId]: todoContents }
 	localStorage.setItem("todos", JSON.stringify(todos));
 }
 
@@ -45,5 +45,5 @@ todoForm.addEventListener("submit", handleTodoSubmit);
 
 const savedTodo = JSON.parse(localStorage.getItem("todos"));
 if (savedTodo.items) {
-	savedTodo.items.forEach(paintTodo);
+	savedTodo.items.g_userId.forEach(paintTodo);
 }
