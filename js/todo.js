@@ -13,14 +13,17 @@ function setTodo(todoContents) {
 
 function deleteTodo(e) {
 	const li = e.target.parentElement;
-	li.remove();
 
 	for (let i = 0; i < todoContents.length; i++) {
 		if (todoContents[i].id === li.id) {
 			todoContents.splice(i, 1);
-			return setTodo(todoContents);
+			setTodo(todoContents);
+			break;
 		}
 	}
+
+	li.remove();
+	console.log("delete success!")
 }
 
 function paintTodo(item) {
