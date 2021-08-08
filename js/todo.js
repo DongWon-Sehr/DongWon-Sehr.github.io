@@ -86,12 +86,12 @@ function loadTodo() {
 		if (Object.keys(savedTodo).includes(g_userId)) {
 			todoContents = savedTodo[g_userId];
 			todoContents.forEach(paintTodo);
+			return updateTodoCount();
 		}
 	}
 
-	todoContents ??= [];
-	updateTodoCount();
+	todoContents = [];
+	return updateTodoCount();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
-// loadTodo();
