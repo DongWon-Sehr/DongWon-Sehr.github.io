@@ -1,7 +1,7 @@
-const todoDiv = document.querySelector("#todoDiv");
-const todoForm = todoDiv.querySelector("#todoForm");
-const todoInput = todoDiv.querySelector("#todoInput");
-const todoList = todoDiv.querySelector("#todoList");
+// const todoDiv = document.querySelector("#todoDiv");
+const todoForm = document.querySelector("#todoForm");
+const todoInput = document.querySelector("#todoInput");
+const todoList = document.querySelector("#todoList");
 
 const todoContents = [];
 
