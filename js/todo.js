@@ -18,7 +18,8 @@ function deleteTodo(e) {
 function paintTodo(item) {
 	const li = document.createElement("li");
 	const span = document.createElement("span");
-	span.innerText = item;
+	li.id = item.id;
+	span.innerText = item.val;
 	li.appendChild(span);
 
 	const button = document.createElement("button");
@@ -33,11 +34,14 @@ function paintTodo(item) {
 
 function handleTodoSubmit(e) {
 	e.preventDefault();
-	const item = todoInput.value;
+	const newItem = {
+		id: new Date(),
+		val: todoInput.value
+	};
 	todoInput.value = ""; // empty input field
-	todoContents.push(item);
+	todoContents.push(newItem);
 
-	paintTodo(item);
+	paintTodo(newItem);
 	setTodo(todoContents);
 }
 
