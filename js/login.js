@@ -25,6 +25,8 @@ function setLoginInfo(userId, userPw) {
 	}
 
 	localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+
+	console.log("\nsetLoginInfo success!");
 }
 
 function doLogin(userId) {
@@ -35,6 +37,8 @@ function doLogin(userId) {
 	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
 	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
 	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
+
+	console.log("\ndoLogin success!");
 }
 
 function doLogout() {
@@ -42,6 +46,8 @@ function doLogout() {
 	loginBtn.classList.toggle(HIDDEN_CLASS_NAME);
 	logoutBtn.classList.toggle(HIDDEN_CLASS_NAME);
 	todoDiv.classList.toggle(HIDDEN_CLASS_NAME);
+
+	console.log("\ndoLogout success!");
 }
 
 function handleLogin(e) {
