@@ -1,4 +1,4 @@
-const loginDiv = document.querySelector("#longinDiv");
+const loginDiv = document.querySelector("#loginDiv");
 
 const loginForm = loginDiv.querySelector("#loginForm");
 const loginInputId = loginForm.querySelector("#loginInputId");
