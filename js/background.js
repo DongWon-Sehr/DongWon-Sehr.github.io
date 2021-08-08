@@ -10,3 +10,4 @@ const imgUrl = `img/${selectedPath}`;
 
 document.body.style.backgroundImage = `url("${imgUrl}")`;
 document.body.style.backgroundSize = "cover";
+document.body.style.backgroundRepeat = "no-repeat";
