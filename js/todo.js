@@ -37,9 +37,11 @@ function deleteTodo(e) {
 			updateTodoCount();
 			console.log("\ndeleteTodo success!")
 
-			break;
+			return;
 		}
 	}
+
+	alert("something wrong with deleting item!")
 
 }
 
