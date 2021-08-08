@@ -21,7 +21,7 @@ function setLoginInfo(userId, userPw) {
 		userInfo.userId = userPw;
 	}
 	else {
-		userInfo = { userId: userPw };
+		userInfo = { [userId]: userPw };
 	}
 
 	localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
