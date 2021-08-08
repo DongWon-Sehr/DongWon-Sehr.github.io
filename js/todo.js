@@ -13,6 +13,13 @@ function setTodo(todoContents) {
 function deleteTodo(e) {
 	const li = e.target.parentElement;
 	li.remove();
+
+	for (let i = 0; i < todoContents.length; i++) {
+		if (todoContents[i].keys()[0] === li.id) {
+			todoContents.splice(i, 1);
+			return setTodo(todoContents);
+		}
+	}
 }
 
 function paintTodo(item) {
