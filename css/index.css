@@ -3,6 +3,13 @@
 }
 
 #bgDimmed {
-	z-index: -1;
+	z-index: 0;
 	background-color:rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	padding: 10%;
+}
+
+#welcome, #loginDiv, #todoDiv {
+	z-index: 1;
 }
