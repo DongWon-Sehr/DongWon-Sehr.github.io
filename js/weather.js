@@ -14,7 +14,7 @@ function onGeoSuccess(position) {
 		city.innerText = `Hi ${data.name}!`;
 
 		const weather = document.querySelector("#weather");
-		weather.innerText = `${data.weather[0].main} ℃ / ${data.main.temp}`;
+		weather.innerText = `${data.weather[0].main} / ${data.main.temp} ℃`;
 	});
 }
 
