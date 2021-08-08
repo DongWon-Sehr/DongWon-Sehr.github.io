@@ -30,13 +30,15 @@ function deleteTodo(e) {
 		if (todoContents[i].id === li.id) {
 			todoContents.splice(i, 1);
 			setTodo(todoContents);
+
+			li.remove();
+			updateTodoCount();
+			console.log("\ndeleteTodo success!")
+
 			break;
 		}
 	}
 
-	li.remove();
-	updateTodoCount();
-	console.log("\ndeleteTodo success!")
 }
 
 function paintTodo(item) {
