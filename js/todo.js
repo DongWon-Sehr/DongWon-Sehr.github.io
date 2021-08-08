@@ -25,23 +25,14 @@ function setTodo(todoContents) {
 
 function deleteTodo(e) {
 	const li = e.target.parentElement;
-	console.log("\n\nli id : " + li.id) + "\n";
 
-	for (let i = 0; i < todoContents.length; i++) {
-		console.log("\ntodo id : " + todoContents[i].id)
-		if (todoContents[i].id === li.id) {
-			todoContents.splice(i, 1);
-			setTodo(todoContents);
+	todoContents = todoContents.filter(function (item) { item.id !== li.id })
+	setTodo(todoContents);
 
-			li.remove();
-			updateTodoCount();
-			console.log("\ndeleteTodo success!")
+	li.remove();
+	updateTodoCount();
 
-			return;
-		}
-	}
-
-	alert("something wrong with deleting item!")
+	console.log("\ndeleteTodo success!")
 
 }
 
