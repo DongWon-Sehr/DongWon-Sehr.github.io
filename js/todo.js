@@ -48,6 +48,7 @@ function loadTodo() {
 			savedTodo[g_userId].forEach(paintTodo);
 		}
 	}
+	userInfoSpan.innerHTML += `<br>Todo Count: ${savedTodo[g_userId].length}`;
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
