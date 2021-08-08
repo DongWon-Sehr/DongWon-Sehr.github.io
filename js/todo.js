@@ -9,6 +9,12 @@ function paintTodo(item) {
 	const span = document.createElement("span");
 	span.innerText = item;
 	li.appendChild(span);
+
+	const button = document.createElement("button");
+	button.innerText = "X";
+	li.appendChild(button);
+
+
 	todoList.appendChild(li);
 
 }
