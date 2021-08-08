@@ -2,7 +2,7 @@
 const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector("#todoList");
-const todoCount = document.querySelector("#todoCount");
+const todoCountSpan = document.querySelector("#todoCount");
 
 const TODO_KEYS = "todos"
 
@@ -77,7 +77,7 @@ function handleTodoSubmit(e) {
 }
 
 function updateTodoCount() {
-	userInfoSpan.innerText = `Todo Count: ${todoContents.length}`
+	todoCountSpan.innerText = `Todo Count: ${todoContents.length}`
 }
 
 function loadTodo() {
