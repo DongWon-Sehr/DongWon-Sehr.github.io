@@ -26,7 +26,7 @@ function setTodo(todoContents) {
 function deleteTodo(e) {
 	const li = e.target.parentElement;
 
-	todoContents = todoContents.filter(function (item) { item.id !== li.id })
+	todoContents = todoContents.filter(function (item) { return item.id !== li.id })
 	setTodo(todoContents);
 
 	li.remove();
