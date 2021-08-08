@@ -46,9 +46,12 @@ function loadTodo() {
 	if (savedTodo) {
 		if (Object.keys(savedTodo).includes(g_userId)) {
 			savedTodo[g_userId].forEach(paintTodo);
+			userInfoSpan.innerHTML += `<br>Todo Count: ${savedTodo[g_userId].length}`;
 		}
 	}
-	userInfoSpan.innerHTML += `<br>Todo Count: ${savedTodo[g_userId].length}`;
+	else {
+		userInfoSpan.innerHTML += `<br>Todo Count: 0`;
+	}
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
