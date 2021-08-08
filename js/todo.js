@@ -27,7 +27,7 @@ function paintTodo(item) {
 	button.addEventListener("click", deleteTodo);
 	li.appendChild(button);
 
-	li.id = new Date();
+	li.id = Date.now();
 	todoList.appendChild(li);
 
 }
