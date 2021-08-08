@@ -36,6 +36,7 @@ function doLogin(userId) {
 	g_userId = userId;
 	loginInputId.value = "";
 	loginInputPw.value = "";
+	loadTodo();
 
 	loginForm.classList.toggle(HIDDEN_CLASS_NAME);
 	logoutForm.classList.toggle(HIDDEN_CLASS_NAME);

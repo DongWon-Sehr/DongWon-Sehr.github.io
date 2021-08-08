@@ -54,4 +54,4 @@ function loadTodo() {
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
-loadTodo();
+// loadTodo();
