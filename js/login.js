@@ -63,7 +63,7 @@ function handleLogin(e) {
 	const userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 	if (userInfo) {
 		if (Object.keys(userInfo).includes(userId)) {
-			if (userInfo.userId !== userPw) {
+			if (userInfo[userId] !== userPw) {
 				alert("wrong ID or PW");
 				return;
 			}
