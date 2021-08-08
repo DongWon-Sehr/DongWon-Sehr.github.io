@@ -32,7 +32,7 @@ function setLoginInfo(userId, userPw) {
 }
 
 function doLogin(userId) {
-	userInfoSpan.innerText = userId;
+	userInfoSpan.innerHTML = `ID : ${userId}`;
 	g_userId = userId;
 	loginInputId.value = "";
 	loginInputPw.value = "";
