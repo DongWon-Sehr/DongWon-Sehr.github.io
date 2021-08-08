@@ -13,5 +13,5 @@ document.body.style.backgroundSize = "cover";
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundPosition = "center";
 
-const bgDimmed = document.querySelector("#bdDimmed");
+const bgDimmed = document.querySelector("#bgDimmed");
 bgDimmed.style.cssText += `{width:${window.innerWidth}px; height:${window.innerHeight}px}`;
