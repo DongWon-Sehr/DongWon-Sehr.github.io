@@ -3,8 +3,6 @@
  api url : api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 */
 
-const API_KEY = "899afd58c137de6ebb86f820e2352a24";
-
 function onGeoSuccess(position) {
 	const lat = position.coords.latitude;
 	const lon = position.coords.longitude;
